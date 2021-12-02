@@ -4,7 +4,10 @@
   "description": "Simple restaurant homepage",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack --watch",
+    "serve": "webpack serve --open",
+    "build": "webpack --mode=production --progress build"
   },
   "repository": {
     "type": "git",
