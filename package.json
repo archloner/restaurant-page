@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "webpack --watch",
-    "serve": "webpack serve --open",
+    "dev": "webpack serve --open --mode=development",
     "build": "webpack --mode=production --progress"
   },
   "repository": {
@@ -27,6 +27,6 @@
   "devDependencies": {
     "webpack": "^5.64.4",
     "webpack-cli": "^4.9.1",
-    "webpack-dev-server": "^3.11.3"
+    "webpack-dev-server": "^4.6.0"
   }
 }
