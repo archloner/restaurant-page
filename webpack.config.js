@@ -4,7 +4,10 @@ module.exports = {
   entry: "./src/index.js",
   devtool: "inline-source-map",
   devServer: {
-    contentBase: path.join(__dirname, "dist"),
+    static: {
+      directory: path.join(__dirname, "dist"),
+    },
+    watchFiles: ['src/**/*.css', 'src/**/*.js', 'dist/index.html'],
   },
   output: {
     filename: "main.js",
