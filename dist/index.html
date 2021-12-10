@@ -1,13 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Restaurant Page</title>
-  <script src="./main.js" defer></script>
-</head>
-<body>
-  <div id="content"></div>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurant Page</title>
+    <script src="./main.js" defer></script>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div id="content">
+      <div class="company">
+        <div class="gradient">
+          <div class="container p-30">
+            <h1 class="title">Ramen People - Nadwiślańska</h1>
+            <p>
+              <span class="rating">4.8(200+)</span> • Wyświetl czas dostawy i
+              opłatę za zlecenie. <a href="#">Podaj adres dostawy</a>
+            </p>
+
+            <button class="fav-button">
+              <svg>
+                <path
+                  d="M16 5c2.5 0 4 1.9 4 4.2 0 1.2-.6 2.3-1.3 3.1C17.5 13.5 12 18 12 18s-5.5-4.5-6.7-5.7C4.5 11.5 4 10.4 4 9.2 4 6.9 5.5 5 8 5c1.7 0 3.3 1.6 4 3 .7-1.4 2.3-3 4-3zm0-3c-1.5 0-2.9.6-4 1.4C10.9 2.5 9.5 2 8 2 4 2 1 5.1 1 9.2c0 1.9.8 3.7 2.2 5.2 1.4 1.5 8.8 7.5 8.8 7.5s7.4-6 8.8-7.5c1.4-1.5 2.2-3.3 2.2-5.2C23 5.1 20 2 16 2z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <nav class="nav">
+          <div class="nav-item">
+            <button class="active">O nas</button>
+          </div>
+          <div class="nav-item">
+            <button>Menu</button>
+          </div>
+          <div class="nav-item">
+            <button>Kontakt</button>
+          </div>
+        </nav>
+      </div>
+
+      <div class="container">
+        <h2>Z myślą o Tobie</h2>
+        <div class="items">
+          <div class="item">
+            <div class="info">
+              <div class="flex-grow">
+                <h3>Ramen Tonkotsu Yokohama Style</h3>
+                <p>
+                  Chasu, menma, blanszowany szpinak, jajo nitamago, drobno
+                  siekana cebula, olej z palonego czosnku, siekany por, nori
+                  i...
+                </p>
+              </div>
+              <span class="price">36,00 zł</span>
+            </div>
+            <div class="photo">
+              <img
+                src="assets/tonkotsu.jpeg"
+                alt="Ramen Tonkotsu Yokohama Style"
+              />
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="info">
+              <div class="flex-grow">
+                <h3>Tantanmen</h3>
+                <p>
+                  Mięsny ramen na gęstym wywarze kotteri z dodatkiem mielonej
+                  wieprzowiny marynowanej na ostro. Kotteri to ciężki, bogaty
+                  wywar...
+                </p>
+              </div>
+              <span class="price">35,00 zł</span>
+            </div>
+            <div class="photo">
+              <img src="assets/tantanmen.jpeg" alt="Tantanmen" />
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="info">
+              <div class="flex-grow">
+                <h3>Spicy Chicken</h3>
+                <p>
+                  Ramen na wywarze drobiowym. Długo gotowany, klarowny, głęboki,
+                  z dodatkiem ostrego chilli tare. Na toppingu: marynowane na
+                  ostro...
+                </p>
+              </div>
+              <span class="price">37,00 zł</span>
+            </div>
+            <div class="photo">
+              <img src="assets/spicy-chicken.jpeg" alt="Spicy Chicken" />
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="info">
+              <div class="flex-grow">
+                <h3>Asakusa Tori Shoyu</h3>
+                <p>
+                  Unikalne shoyu przygotowane wspólnie z mistrzem Kohei Yagi.
+                  Drobiowo-wieprzowy bulion assari, specjalnie dedykowany
+                  makaron, karkówka...
+                </p>
+              </div>
+              <span class="price">37,00 zł</span>
+            </div>
+            <div class="photo">
+              <img src="assets/asakusa.jpeg" alt="Asakusa Tori Shoyu" />
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="info">
+              <div class="flex-grow">
+                <h3>Hokkaido</h3>
+                <p>
+                  Wegański, ryżowy wywar z dedykowanym, sezamowym tare na bazie
+                  tahiny i miso. Na toppingu: pieczona dynia hokkaido, tofu,
+                  por, dymka, nitki...
+                </p>
+              </div>
+              <span class="price">37,00 zł</span>
+            </div>
+            <div class="photo">
+              <img src="assets/hokkaido.jpeg" alt="Hokkaido" />
+            </div>
+          </div>
+        </div>
+
+        <h2>Assari Ramen</h2>
+        <div class="items">
+          <div class="item">
+            <div class="info">
+              <div class="flex-grow">
+                <h3>Miso Ramen</h3>
+                <p>
+                  Ramen na wywarze drobiowym z dodatkiem tare miso - pasty ze
+                  sfermentowanych nasion soi. Na toppingu: wołowina, jajko
+                  ajitsuke, palony por...
+                </p>
+              </div>
+              <span class="price">37,00 zł</span>
+            </div>
+            <div class="photo">
+              <img src="assets/miso.jpeg" alt="Miso Ramen" />
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="info">
+              <div class="flex-grow">
+                <h3>Kimchi Ramen</h3>
+                <p>
+                  Autorski ramen na bazie wody spod fermentacji naszego kimchi i
+                  klarownego wywaru drobiowego assari. Na toppingu: schab sous
+                  vide, jajko ajitsuke, kimchi...
+                </p>
+              </div>
+              <span class="price">37,00 zł</span>
+            </div>
+            <div class="photo">
+              <img src="assets/kimchi.jpeg" alt="Kimchi Ramen" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer class="mt-30">
+        <span
+          >Created by
+          <a href="https://github.com/fbiernat">fbiernat</a> 2021</span
+        >
+      </footer>
+    </div>
+  </body>
 </html>
