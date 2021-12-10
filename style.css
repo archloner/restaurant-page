@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700&display=swap");
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  font-family: "Montserrat", Verdana, Geneva, Tahoma, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h2 {
+  margin: 1.8rem 0;
+}
+
+.container {
+  padding: 0 30px;
+}
+
+.items {
+  margin: 10px 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  row-gap: 40px;
+}
+
+.item {
+  flex: 1 1 30%;
+  display: flex;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  height: 150px;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+
+.item:hover {
+  border: 1px solid rgba(0, 0, 0, 0.85);
+}
+
+.item .info h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.item .info {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.item .info .flex-grow {
+  flex: 1;
+}
+
+.item .info p {
+  margin: 0.4rem 0;
+  font-size: 0.8rem;
+  color: rgba(0, 0, 0, 0.85);
+}
+
+.item .info .price {
+  font-size: 1.1rem;
+}
+
+.item .photo img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.company {
+  height: 300px;
+  background: url(./assets/paulo-doi-6uTQmtqcAzs-unsplash.jpg);
+  background-size: cover;
+  background-position-y: 50%;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.company .gradient {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0)
+    linear-gradient(0deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0) 100%) repeat
+    scroll 0% 0%;
+  z-index: 10;
+}
+
+.company .gradient .container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.title {
+  margin: 0.5rem 0;
+}
+
+.company .gradient .container p {
+  margin: 0;
+}
+
+.company .gradient .container a {
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+}
+
+.company .gradient .container a:visited {
+  color: rgb(255, 255, 255);
+}
+
+.rating {
+  font-weight: bold;
+}
+
+.fav-button {
+  position: absolute;
+  right: 34px;
+  bottom: 34px;
+  width: 24px;
+  height: 24px;
+  background-color: transparent;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+}
+
+.fav-button svg {
+  fill: rgb(255, 255, 255);
+  width: 24px;
+  height: 24px;
+  opacity: 0.8;
+}
+
+.fav-button:hover svg {
+  opacity: 1;
+}
+
+.nav {
+  display: flex;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.nav-item {
+  padding: 30px 30px 30px 0;
+}
+
+.nav-item button {
+  outline: none;
+  border: 0;
+  background-color: transparent;
+  font-size: 1.2rem;
+  font-family: "Montserrat", Verdana, Geneva, Tahoma, sans-serif;
+  cursor: pointer;
+  position: relative;
+}
+
+.nav-item button.active::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: rgb(0, 0, 0);
+  top: 55px;
+  left: 0;
+}
+
+.mt-30 {
+  margin-top: 30px;
+}
+
+.p-30 {
+  padding: 30px;
+}
+
+footer {
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 1);
+  color: rgba(255, 255, 255, 1);
+}
+
+footer a {
+  color: rgb(255, 255, 255);
+}
+
+@media screen and (max-width: 1310px) {
+  .items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 866px) {
+  .items {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
