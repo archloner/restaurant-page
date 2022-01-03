@@ -26,7 +26,7 @@ export class SiteBuilder {
 
     const title = document.createElement("h1");
     title.classList.add("title");
-    title.textContent = "Ramen People - Nadwiślańska";
+    title.textContent = "Ramen People ラーメン•ピープル - Nadwiślańska";
     container.appendChild(title);
 
     const paragraph = document.createElement("p");
@@ -149,13 +149,10 @@ export class SiteBuilder {
   }
 
   build() {
-    this.clearDOM();
-    this.content.appendChild(this.buildHeader());
-    this.content.appendChild(this.buildNav());
+    this.rebuild(this.bodyBuilder.build(ABOUT_US));
   }
 
   rebuild(body) {
-    console.log('Rebuilding page');
     this.clearDOM();
     this.content.appendChild(this.buildHeader());
     this.content.appendChild(this.buildNav());
