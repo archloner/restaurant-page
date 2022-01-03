@@ -55,7 +55,7 @@ export class SiteBuilder {
     return company;
   }
 
-  buildNav() {
+  buildNav(pageId) {
     const container = document.createElement("div");
     container.classList.add("container");
 
@@ -66,11 +66,13 @@ export class SiteBuilder {
     navItem.classList.add("nav-item");
 
     const aboutUsBtn = document.createElement("button");
-    aboutUsBtn.classList.add("active");
     aboutUsBtn.textContent = "O nas";
     aboutUsBtn.addEventListener("click", (e) => {
       this.handleClickAboutUs(e);
     });
+    if (pageId === ABOUT_US) {
+      aboutUsBtn.classList.add("active");
+    }
     navItem.appendChild(aboutUsBtn);
 
     const navItem1 = document.createElement("div");
@@ -81,6 +83,9 @@ export class SiteBuilder {
     menuButton.addEventListener("click", (e) => {
       this.handleClickMenu(e);
     });
+    if (pageId === MENU) {
+      menuButton.classList.add("active");
+    }
     navItem1.appendChild(menuButton);
 
     const navItem2 = document.createElement("div");
@@ -91,6 +96,9 @@ export class SiteBuilder {
     contactButton.addEventListener("click", (e) => {
       this.handleClickContact(e);
     });
+    if (pageId === CONTACT) {
+      contactButton.classList.add("active");
+    }
     navItem2.appendChild(contactButton);
 
     nav.appendChild(navItem);
@@ -103,41 +111,24 @@ export class SiteBuilder {
   }
 
   handleClickAboutUs(e) {
-    // Clear .active class
-    const activeButton = document.querySelector("button.active");
-    activeButton.classList.remove("active");
-    // Add .active class to clicked button
-    e.target.classList.add("active");
-
-    this.rebuild(this.bodyBuilder.build(ABOUT_US));
+    this.rebuild(ABOUT_US);
   }
 
   handleClickMenu(e) {
-    // Clear .active class
-    const activeButton = document.querySelector("button.active");
-    activeButton.classList.remove("active");
-    // Add .active class to clicked button
-    e.target.classList.add("active");
-
-    this.rebuild(this.bodyBuilder.build(MENU));
+    this.rebuild(MENU);
   }
 
   handleClickContact(e) {
-    // Clear .active class
-    const activeButton = document.querySelector("button.active");
-    activeButton.classList.remove("active");
-    // Add .active class to clicked button
-    e.target.classList.add("active");
-
-    this.rebuild(this.bodyBuilder.build(CONTACT));
+    this.rebuild(CONTACT);
   }
 
   buildFooter() {
-    const footer = document.createElement('footer');
-    footer.classList.add('mt-30');
+    const footer = document.createElement("footer");
+    footer.classList.add("mt-30");
 
-    const span = document.createElement('span');
-    span.innerHTML = "Created by <a href='https://github.com/fbiernat'>fbiernat</a> 2021";
+    const span = document.createElement("span");
+    span.innerHTML =
+      "Created by <a href='https://github.com/fbiernat'>fbiernat</a> 2021";
 
     footer.appendChild(span);
 
@@ -149,13 +140,14 @@ export class SiteBuilder {
   }
 
   build() {
-    this.rebuild(this.bodyBuilder.build(ABOUT_US));
+    this.rebuild(ABOUT_US);
   }
 
-  rebuild(body) {
+  rebuild(pageId) {
     this.clearDOM();
     this.content.appendChild(this.buildHeader());
-    this.content.appendChild(this.buildNav());
+    this.content.appendChild(this.buildNav(pageId));
+    let body = this.bodyBuilder.build(pageId);
     this.content.appendChild(body);
     this.content.append(this.buildFooter());
   }

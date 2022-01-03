@@ -184,10 +184,12 @@ footer {
   justify-content: center;
   background-color: rgba(0, 0, 0, 1);
   color: rgba(255, 255, 255, 1);
+  font-size: 0.7rem;
 }
 
 footer a {
   color: rgb(255, 255, 255);
+  
 }
 
 .about-container {
@@ -214,6 +216,47 @@ footer a {
   max-width: 400px;
 }
 
+.contact-info-wrapper {
+  max-width: 830px;
+  margin: 50px auto;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.15);
+}
+
+.contact-info {
+  font-size: 1.2rem;
+}
+
+.contact-info h1 {
+  margin: 0;
+  padding: 0;
+}
+
+.row {
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+.muted {
+  color: rgba(0,0,0,0.35);
+  font-size: 1.1rem;
+}
+
+.contact-info svg {
+  width: 24px;
+  height: 24px;
+  margin: 5px;
+}
+
+.map-wrapper {
+  background-image: url('./assets/ramen-people-location.png');
+  background-size: cover;
+  background-position: 50% 50%;
+  height: 300px;
+  width: 800px;
+}
 
 @media screen and (max-width: 1310px) {
   .items {
