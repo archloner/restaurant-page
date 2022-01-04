@@ -170,7 +170,7 @@ h2 {
 }
 
 .mt-30 {
-  margin-top: 30px;
+  margin-top: 50px;
 }
 
 .p-30 {
@@ -188,8 +188,7 @@ footer {
 }
 
 footer a {
-  color: rgb(255, 255, 255);
-  
+  color: rgb(255, 255, 255); 
 }
 
 .about-container {
@@ -217,11 +216,19 @@ footer a {
 }
 
 .contact-info-wrapper {
-  max-width: 830px;
-  margin: 50px auto;
+  max-width: 730px;
+  margin: auto;
   padding: 15px;
   border-radius: 10px;
   box-shadow: 5px 5px 10px rgba(0,0,0,0.15);
+}
+
+.map-wrapper {
+  background-image: url('./assets/ramen-people-location.png');
+  background-size: cover;
+  background-position: 50% 50%;
+  height: 300px;
+  width: 100%;
 }
 
 .contact-info {
@@ -250,13 +257,6 @@ footer a {
   margin: 5px;
 }
 
-.map-wrapper {
-  background-image: url('./assets/ramen-people-location.png');
-  background-size: cover;
-  background-position: 50% 50%;
-  height: 300px;
-  width: 800px;
-}
 
 @media screen and (max-width: 1310px) {
   .items {
@@ -267,5 +267,31 @@ footer a {
 @media screen and (max-width: 866px) {
   .items {
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  .about {
+    flex-direction: column;
+  }
+
+  .about-container {
+    max-width: 100%;
+  }
+
+  .contact-info-wrapper {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 515px) {
+  .item .info p {
+    font-size: 0.6rem;
+  }
+
+  .item .info h3 {
+    font-size: 0.9rem;
+  }
+
+  .item .info .price {
+    font-size: 0.8rem;
   }
 }
