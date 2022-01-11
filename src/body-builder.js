@@ -54,12 +54,13 @@ export class BodyBuilder {
   }
 
   build(contentId) {
-    if (contentId === ABOUT_US) {
-      return this.buildAboutUsPage();
-    } else if (contentId === MENU) {
-      return this.buildMenuPage();
-    } else if (contentId === CONTACT) {
-      return this.buildContactPage();
+    switch(contentId) {
+      case ABOUT_US:
+        return this.buildAboutUsPage();
+      case MENU:
+        return this.buildMenuPage();
+      case CONTACT:
+        return this.buildContactPage();
     }
   }
 
@@ -75,9 +76,9 @@ export class BodyBuilder {
 
     container.appendChild(header);
 
-    for (let item of this.menu1) {
+    this.menu1.map((item) => {
       items.appendChild(this.createItem(item));
-    }
+    })
     container.appendChild(items);
 
     const header2 = document.createElement("h2");
@@ -86,9 +87,9 @@ export class BodyBuilder {
 
     const items2 = document.createElement("div");
     items2.classList.add("items");
-    for (let item of this.menu2) {
+    this.menu2.map((item) => {
       items2.appendChild(this.createItem(item));
-    }
+    })
     container.appendChild(items2);
 
     return container;
