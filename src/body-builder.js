@@ -22,7 +22,7 @@ export class BodyBuilder {
 
   buildMenuPage() {
     const container = document.createElement("div");
-    container.classList.add("container");
+    container.classList.add("container", "flex-1");
 
     const header = document.createElement("h2");
     header.textContent = "Z myślą o Tobie";
@@ -95,7 +95,7 @@ export class BodyBuilder {
 
   buildAboutUsPage() {
     const container = document.createElement("div");
-    container.classList.add("container", "about-container");
+    container.classList.add("container", "about-container", "flex-1");
 
     const aboutUsHeader = document.createElement("h2");
     aboutUsHeader.textContent = "O nas";
@@ -141,7 +141,7 @@ export class BodyBuilder {
 
   buildContactPage() {
     const container = document.createElement("div");
-    container.classList.add("container", "contact-container");
+    container.classList.add("container", "contact-container", "flex-1");
 
     const heading = document.createElement("h2");
     heading.textContent = "Kontakt";
