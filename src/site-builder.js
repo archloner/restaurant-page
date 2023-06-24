@@ -26,7 +26,7 @@ export class SiteBuilder {
 
     const title = document.createElement("h1");
     title.classList.add("title");
-    title.textContent = "Ramen People ラーメン•ピープル - Nadwiślańska";
+    title.innerHTML = "Ramen People ラーメン•ピープル <br/>Nadwiślańska";
     container.appendChild(title);
 
     const paragraph = document.createElement("p");

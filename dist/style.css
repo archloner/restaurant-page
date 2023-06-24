@@ -200,9 +200,25 @@ footer a {
   display: flex;
 }
 
+.about-photo {
+  position: relative;
+}
+
 .about-photo img {
   max-width: 600px;
   width: 100%;
+  border: 20px solid lightpink;
+}
+
+.about-photo::after {
+  content: '';
+  position: absolute;
+  z-index: -5;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(15deg, lightslategray 5%, white);
+  top: 25px;
+  left: 35px;
 }
 
 .about-text {
@@ -218,7 +234,7 @@ footer a {
 .contact-info-wrapper {
   max-width: 730px;
   margin: auto;
-  padding: 15px;
+  padding: 35px;
   border-radius: 10px;
   box-shadow: 5px 5px 10px rgba(0,0,0,0.15);
 }
@@ -229,6 +245,7 @@ footer a {
   background-position: 50% 50%;
   height: 300px;
   width: 100%;
+  margin-bottom: 1rem;
 }
 
 .contact-info {
@@ -241,9 +258,13 @@ footer a {
 }
 
 .row {
-  padding: 10px 0;
+  padding: 3px 0;
   display: flex;
   align-items: center;
+}
+
+.muted.row {
+  margin-bottom: 0.5rem;
 }
 
 .muted {
